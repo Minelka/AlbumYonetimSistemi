@@ -6,6 +6,7 @@ namespace AYS_UI
 {
     public partial class Form1 : Form
     {
+        private bool isVisiblePassword = false;
         public Form1()
         {
 
@@ -43,13 +44,13 @@ namespace AYS_UI
                 {
                     txt_sifre.PasswordChar = '\0';
                     isVisiblePassword = true;
-                    btnShowHidePassword.Image = AYS_BLL.Properties.Resources.eyebrow;
+                    btnShowHidePassword.Image = AYS_UI.Properties.Resources.;
                 }
                 else
                 {
                     txt_sifre.PasswordChar = '*';
                     isVisiblePassword = false;
-                    btnShowHidePassword.Image = DP_UI.Properties.Resources.eye_open;
+                    btnShowHidePassword.Image = AYS_UI.Properties.Resources.eye_open;
                 }
             }
         }
