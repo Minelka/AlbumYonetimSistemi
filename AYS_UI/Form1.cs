@@ -15,44 +15,44 @@ namespace AYS_UI
 
         }
 
-        private void btn_girisyap_Click(object sender, EventArgs e)
-        {
-            string name = txt_ad.Text;
-            string password = txt_sifre.Text;
+        //private void btn_girisyap_Click(object sender, EventArgs e)
+        //{
+        //    string name = txt_ad.Text;
+        //    string password = txt_sifre.Text;
 
-            AdminModel admin;
-            using (AdminManager adminManager = new AdminManager())
-            {
-                admin = userManager.Search(u => u.Name == Name && u.Password == password)
-                                      .FirstOrDefault();   //getallusers reportmanagerdan geliyor, username ise usermanagerdan gelmeli ama göremez.
+        //    AdminModel admin;
+        //    using (AdminManager adminManager = new AdminManager())
+        //    {
+        //        admin = userManager.Search(u => u.Name == Name && u.Password == password)
+        //                              .FirstOrDefault();   //getallusers reportmanagerdan geliyor, username ise usermanagerdan gelmeli ama göremez.
 
-                if (admin != null)
-                {
-                    // Admin ise Form5'e yönlendir
-                    YonetimSayfasi yonetimsayfasi = new YonetimSayfasi();
-                    this.Hide();
-                    YonetimSayfasi.ShowDialog();
-                    this.Show();
-                }
-            }
+        //        if (admin != null)
+        //        {
+        //            // Admin ise Form5'e yönlendir
+        //            YonetimSayfasi yonetimsayfasi = new YonetimSayfasi();
+        //            this.Hide();
+        //            YonetimSayfasi.ShowDialog();
+        //            this.Show();
+        //        }
+        //    }
 
-            private void btnShowHidePassword_Click(object sender, EventArgs e)
-            {
+        //    private void btnShowHidePassword_Click(object sender, EventArgs e)
+        //    {
 
-                if (!isVisiblePassword)
-                {
-                    txt_sifre.PasswordChar = '\0';
-                    isVisiblePassword = true;
-                    btnShowHidePassword.Image = DP_UI.Properties.Resources.eyebrow;
-                }
-                else
-                {
-                    txt_sifre.PasswordChar = '*';
-                    isVisiblePassword = false;
-                    btnShowHidePassword.Image = DP_UI.Properties.Resources.eye_open;
-                }
-            }
-        }
+        //        if (!isVisiblePassword)
+        //        {
+        //            txt_sifre.PasswordChar = '\0';
+        //            isVisiblePassword = true;
+        //            btnShowHidePassword.Image = DP_UI.Properties.Resources.eyebrow;
+        //        }
+        //        else
+        //        {
+        //            txt_sifre.PasswordChar = '*';
+        //            isVisiblePassword = false;
+        //            btnShowHidePassword.Image = DP_UI.Properties.Resources.eye_open;
+        //        }
+        //    }
+        //}
 
         private void btn_kayit_Click(object sender, EventArgs e)
         {

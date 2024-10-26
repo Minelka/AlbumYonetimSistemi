@@ -101,7 +101,7 @@
             btn_girisyap.TabIndex = 7;
             btn_girisyap.Text = "Giriş Yap";
             btn_girisyap.UseVisualStyleBackColor = false;
-            btn_girisyap.Click += btn_girisyap_Click;
+            //btn_girisyap.Click += btn_girisyap_Click;
             // 
             // btn_hataligiris
             // 
