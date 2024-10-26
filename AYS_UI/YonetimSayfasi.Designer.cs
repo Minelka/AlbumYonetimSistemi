@@ -32,11 +32,11 @@
             dataGridView1 = new DataGridView();
             btn_tamami = new Button();
             gb_albumekleme = new GroupBox();
+            dtpDate = new DateTimePicker();
             btn_ekle = new Button();
             chc_status = new CheckBox();
             txt_artist = new TextBox();
             lbl_artist = new Label();
-            txt_release = new TextBox();
             lbl_date = new Label();
             lbl_status = new Label();
             txt_discount = new TextBox();
@@ -75,15 +75,16 @@
             btn_tamami.TabIndex = 1;
             btn_tamami.Text = "TAMAMI";
             btn_tamami.UseVisualStyleBackColor = true;
+            btn_tamami.Click += btn_tamami_Click;
             // 
             // gb_albumekleme
             // 
             gb_albumekleme.BackColor = Color.Chocolate;
+            gb_albumekleme.Controls.Add(dtpDate);
             gb_albumekleme.Controls.Add(btn_ekle);
             gb_albumekleme.Controls.Add(chc_status);
             gb_albumekleme.Controls.Add(txt_artist);
             gb_albumekleme.Controls.Add(lbl_artist);
-            gb_albumekleme.Controls.Add(txt_release);
             gb_albumekleme.Controls.Add(lbl_date);
             gb_albumekleme.Controls.Add(lbl_status);
             gb_albumekleme.Controls.Add(txt_discount);
@@ -102,6 +103,14 @@
             gb_albumekleme.TabStop = false;
             gb_albumekleme.Text = "ALBÜM EKLEME EKRANI";
             // 
+            // dtpDate
+            // 
+            dtpDate.Format = DateTimePickerFormat.Short;
+            dtpDate.Location = new Point(154, 99);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(110, 33);
+            dtpDate.TabIndex = 7;
+            // 
             // btn_ekle
             // 
             btn_ekle.Location = new Point(231, 236);
@@ -111,6 +120,7 @@
             btn_ekle.TabIndex = 13;
             btn_ekle.Text = "EKLE";
             btn_ekle.UseVisualStyleBackColor = true;
+            btn_ekle.Click += btn_ekle_Click;
             // 
             // chc_status
             // 
@@ -139,14 +149,6 @@
             lbl_artist.Size = new Size(100, 24);
             lbl_artist.TabIndex = 10;
             lbl_artist.Text = "Artist/Grup:";
-            // 
-            // txt_release
-            // 
-            txt_release.Location = new Point(154, 98);
-            txt_release.Margin = new Padding(3, 2, 3, 2);
-            txt_release.Name = "txt_release";
-            txt_release.Size = new Size(110, 33);
-            txt_release.TabIndex = 9;
             // 
             // lbl_date
             // 
@@ -232,6 +234,7 @@
             btn_satisdurmus.TabIndex = 3;
             btn_satisdurmus.Text = "SATIŞI DURAN";
             btn_satisdurmus.UseVisualStyleBackColor = true;
+            btn_satisdurmus.Click += btn_satisdurmus_Click;
             // 
             // btn_devam
             // 
@@ -243,6 +246,7 @@
             btn_devam.TabIndex = 4;
             btn_devam.Text = "SATIŞI DEVAM ";
             btn_devam.UseVisualStyleBackColor = true;
+            btn_devam.Click += btn_devam_Click;
             // 
             // btn_son
             // 
@@ -254,6 +258,7 @@
             btn_son.TabIndex = 5;
             btn_son.Text = "SON 10";
             btn_son.UseVisualStyleBackColor = true;
+            btn_son.Click += btn_son_Click;
             // 
             // btn_indirim
             // 
@@ -265,6 +270,7 @@
             btn_indirim.TabIndex = 6;
             btn_indirim.Text = "İNDİRİMDEKİLER";
             btn_indirim.UseVisualStyleBackColor = true;
+            btn_indirim.Click += btn_indirim_Click;
             // 
             // YonetimSayfasi
             // 
@@ -282,6 +288,7 @@
             Controls.Add(dataGridView1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "YonetimSayfasi";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "YonetimSayfasi";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             gb_albumekleme.ResumeLayout(false);
@@ -298,7 +305,6 @@
         private Label lbl_name;
         private TextBox txt_artist;
         private Label lbl_artist;
-        private TextBox txt_release;
         private Label lbl_date;
         private Label lbl_status;
         private TextBox txt_discount;
@@ -311,5 +317,6 @@
         private Button btn_devam;
         private Button btn_son;
         private Button btn_indirim;
+        private DateTimePicker dtpDate;
     }
 }
