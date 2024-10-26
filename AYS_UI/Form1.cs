@@ -1,3 +1,5 @@
+using AYS_BLL.Managers.Concrete;
+using AYS_BLL.Models;
 using System.Xml.Linq;
 
 namespace AYS_UI
@@ -20,39 +22,37 @@ namespace AYS_UI
         //    string name = txt_ad.Text;
         //    string password = txt_sifre.Text;
 
-        //    AdminModel admin;
-        //    using (AdminManager adminManager = new AdminManager())
-        //    {
-        //        admin = userManager.Search(u => u.Name == Name && u.Password == password)
-        //                              .FirstOrDefault();   //getallusers reportmanagerdan geliyor, username ise usermanagerdan gelmeli ama göremez.
+            AdminModel admin;
+            using (AdminManager adminManager = new AdminManager())
+            {
+                admin = adminManager.Search(u => u.Name == Name && u.Password == password).FirstOrDefault();   //getallusers reportmanagerdan geliyor, username ise usermanagerdan gelmeli ama göremez.
 
-        //        if (admin != null)
-        //        {
-        //            // Admin ise Form5'e yönlendir
-        //            YonetimSayfasi yonetimsayfasi = new YonetimSayfasi();
-        //            this.Hide();
-        //            YonetimSayfasi.ShowDialog();
-        //            this.Show();
-        //        }
-        //    }
+                if (admin != null)
+                {
+                    YonetimSayfasi yonetimsayfasi = new YonetimSayfasi();
+                    this.Hide();
+                    YonetimSayfasi.ShowDialog();
+                    this.Show();
+                }
+            }
 
         //    private void btnShowHidePassword_Click(object sender, EventArgs e)
         //    {
 
-        //        if (!isVisiblePassword)
-        //        {
-        //            txt_sifre.PasswordChar = '\0';
-        //            isVisiblePassword = true;
-        //            btnShowHidePassword.Image = DP_UI.Properties.Resources.eyebrow;
-        //        }
-        //        else
-        //        {
-        //            txt_sifre.PasswordChar = '*';
-        //            isVisiblePassword = false;
-        //            btnShowHidePassword.Image = DP_UI.Properties.Resources.eye_open;
-        //        }
-        //    }
-        //}
+                if (!isVisiblePassword)
+                {
+                    txt_sifre.PasswordChar = '\0';
+                    isVisiblePassword = true;
+                    btnShowHidePassword.Image = AYS_BLL.Properties.Resources.eyebrow;
+                }
+                else
+                {
+                    txt_sifre.PasswordChar = '*';
+                    isVisiblePassword = false;
+                    btnShowHidePassword.Image = DP_UI.Properties.Resources.eye_open;
+                }
+            }
+        }
 
         private void btn_kayit_Click(object sender, EventArgs e)
         {
