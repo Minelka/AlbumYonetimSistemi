@@ -118,11 +118,12 @@
             // 
             // btnShowHidePassword
             // 
+            btnShowHidePassword.BackgroundImage = (Image)resources.GetObject("btnShowHidePassword.BackgroundImage");
+            btnShowHidePassword.BackgroundImageLayout = ImageLayout.Center;
             btnShowHidePassword.Location = new Point(444, 445);
             btnShowHidePassword.Name = "btnShowHidePassword";
-            btnShowHidePassword.Size = new Size(24, 29);
+            btnShowHidePassword.Size = new Size(31, 28);
             btnShowHidePassword.TabIndex = 9;
-            btnShowHidePassword.Text = "*";
             btnShowHidePassword.UseVisualStyleBackColor = true;
             // 
             // Form1

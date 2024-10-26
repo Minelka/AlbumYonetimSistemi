@@ -1,3 +1,5 @@
+using AYS_BLL.Managers.Concrete;
+using AYS_BLL.Models;
 using System.Xml.Linq;
 
 namespace AYS_UI
@@ -23,12 +25,10 @@ namespace AYS_UI
             AdminModel admin;
             using (AdminManager adminManager = new AdminManager())
             {
-                admin = userManager.Search(u => u.Name == Name && u.Password == password)
-                                      .FirstOrDefault();   //getallusers reportmanagerdan geliyor, username ise usermanagerdan gelmeli ama göremez.
+                admin = adminManager.Search(u => u.Name == Name && u.Password == password).FirstOrDefault();   //getallusers reportmanagerdan geliyor, username ise usermanagerdan gelmeli ama göremez.
 
                 if (admin != null)
                 {
-                    // Admin ise Form5'e yönlendir
                     YonetimSayfasi yonetimsayfasi = new YonetimSayfasi();
                     this.Hide();
                     YonetimSayfasi.ShowDialog();
@@ -43,7 +43,7 @@ namespace AYS_UI
                 {
                     txt_sifre.PasswordChar = '\0';
                     isVisiblePassword = true;
-                    btnShowHidePassword.Image = DP_UI.Properties.Resources.eyebrow;
+                    btnShowHidePassword.Image = AYS_BLL.Properties.Resources.eyebrow;
                 }
                 else
                 {
