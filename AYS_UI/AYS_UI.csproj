@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AYS_BLL\AYS_BLL.csproj" />
+  </ItemGroup>
+
 </Project>
