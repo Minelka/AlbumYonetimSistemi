@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AYS_BLL.Managers.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace AYS_UI
         public YonetimSayfasi()
         {
             InitializeComponent();
+            //using (AlbumManager albumManager = new AlbumManager())
+            //{
+            //    dataGridView1.DataSource = albumManager.GetAllAlbums().ToList();
+
+            //}
+
+
+            Getir();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void Getir()
+        {
+            using (AlbumManager albumManager = new AlbumManager())
+            {
+                dataGridView1.DataSource = albumManager.GetDiscountedAlbums().ToList();
+
+            }
+        }
+
     }
 }

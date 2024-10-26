@@ -45,7 +45,7 @@ namespace AYS_DAL.Data
             string serverMinel = "DESKTOP-J5485VO";
             string serverEfnan = "DESKTOP-VAQBE6U";
 
-            string connStr = $"Server={serverMinel};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
+            string connStr = $"Server={serverEfnan};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
 
             optionsBuilder.UseSqlServer(connStr);
         }

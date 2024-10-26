@@ -52,7 +52,7 @@ namespace AYS_DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Admins");
+                    b.ToTable("Admins", (string)null);
 
                     b.HasData(
                         new
@@ -107,7 +107,7 @@ namespace AYS_DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Albums");
+                    b.ToTable("Albums", (string)null);
 
                     b.HasData(
                         new
