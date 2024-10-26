@@ -18,10 +18,10 @@ namespace AYS_UI
 
         }
 
-        private void btn_girisyap_Click(object sender, EventArgs e)
-        {
-            string name = txt_ad.Text;
-            string password = txt_sifre.Text;
+        //private void btn_girisyap_Click(object sender, EventArgs e)
+        //{
+        //    string name = txt_ad.Text;
+        //    string password = txt_sifre.Text;
 
             AdminModel admin;
             using (AdminManager adminManager = new AdminManager())
@@ -37,8 +37,8 @@ namespace AYS_UI
                 }
             }
 
-            private void btnShowHidePassword_Click(object sender, EventArgs e)
-            {
+        //    private void btnShowHidePassword_Click(object sender, EventArgs e)
+        //    {
 
                 if (!isVisiblePassword)
                 {
