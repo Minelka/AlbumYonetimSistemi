@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace AYS_BLL.Managers.Concrete
 {
+    //Manager sınıfında bulunanları Album sınıfına göre özelleştirme işlemleri yapılır.
     public class AlbumManager : Manager<AlbumModel, AlbumService<AlbumModel>>
     {
         private readonly AlbumService<AlbumModel> _albumService;

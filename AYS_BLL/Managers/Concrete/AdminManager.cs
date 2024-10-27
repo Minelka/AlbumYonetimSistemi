@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace AYS_BLL.Managers.Concrete
 {
+    //Manager sınıfında bulunanları Admin sınıfına göre özelleştirme işlemleri yapılır.
     public class AdminManager : Manager<AdminModel, AdminService<AdminModel>>
     {
         private IMapper _mapper;

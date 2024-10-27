@@ -15,7 +15,7 @@ namespace AYS_BLL.Managers.Abstract
         private protected readonly TService _service;
         private bool disposed = false;
 
-
+        // Kullanıcının form üzerinden Crud işlemleri yapmasını sağlar.
         protected Manager()
         {
             _service = new TService();

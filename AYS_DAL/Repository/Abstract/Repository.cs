@@ -20,12 +20,14 @@ namespace AYS_DAL.Repository.Abstract
             _context = context;
             _entities = _context.Set<TEntity>();
         }
+        // Yeni bir varlık oluşturur ve veritabanına ekler.
         public void Create(TEntity entity)
         {
             entity.IsActive = true;
             _entities.Add(entity);
         }
-       
+
+        // Mevcut bir varlığı günceller.
         public void Update(TEntity entity)
         {
             var existingEntity = GetById(entity.Id);
@@ -45,7 +47,7 @@ namespace AYS_DAL.Repository.Abstract
 
             _entities.Update(entity);
         }
-
+        //Varlığı siler (soft delete).
         public void Delete(TEntity entity)
         {
             entity.Deleted = DateTime.Now;
@@ -53,26 +55,31 @@ namespace AYS_DAL.Repository.Abstract
             Update(entity);
         }
 
+        // Tüm varlıkları getirir.
         public ICollection<TEntity> GetAll()
         {
             return _entities.AsNoTracking().Where(e => e.Deleted == null).ToList();
         }
 
+        // Belirli bir ID'ye sahip varlığı getirir.
         public TEntity GetById(int id)
         {
             return _entities.AsNoTracking().SingleOrDefault(e => e.Id == id);
         }
 
+        // Varlığı veritabanından kalıcı olarak siler.
         public void Remove(TEntity entity)
         {
             _entities.Remove(entity);
         }
 
+        // Belirli koşullara göre varlıkları arar.
         public ICollection<TEntity> Search(Expression<Func<TEntity, bool>> conditions)
         {
             return _entities.AsNoTracking().Where(e => e.Deleted == null).Where(conditions.Compile()).ToList();
         }
 
+        // Kullanılan kaynakları serbest bırakır.
         protected virtual void Dispose(bool disposing)
         {
             if (!this.disposed)

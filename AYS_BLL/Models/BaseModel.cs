@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AYS_BLL.Models
 {
+    //Ortak proplar burada verilir. Görüntülenme yapılabilmesi için model oluşturulur.
     public abstract class BaseModel
     {
         public int Id { get; set; }

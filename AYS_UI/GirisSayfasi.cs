@@ -21,6 +21,7 @@ namespace AYS_UI
         {
 
         }
+        //Þifreyi hashler ve databasedeki ile uyumluðununa bakar.
         private string sha256_hash(string sifre)
         {
             using (SHA256 hash = SHA256Managed.Create())
@@ -29,6 +30,7 @@ namespace AYS_UI
             }
         }
 
+        //Kullanýcý þifreyi yazarken þifrenin gözüküp gözükmemesini kontrol eder.
         private void btnShowHidePassword_Click(object sender, EventArgs e)
         {
             if (!isVisiblePassword)
@@ -44,14 +46,14 @@ namespace AYS_UI
                 btnShowHidePassword.Image = AYS_UI.Properties.Resources.resim__2_;
             }
         }
-
+        //Kayýt sayfasýna aktarýr.
         private void btn_kayit_Click(object sender, EventArgs e)
         {
             this.Hide();
             KayitSayfasics kayitsayfasi = new KayitSayfasics();
             kayitsayfasi.ShowDialog();
         }
-
+        //Eþleþen admin varsa yönetim sayfasýna aktarýr. Yoka gerekli hatayý verir.
         private void btn_girisyap_Click_1(object sender, EventArgs e)
         {
             string name = txt_ad.Text;

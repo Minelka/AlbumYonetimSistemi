@@ -24,6 +24,8 @@ namespace AYS_UI
         {
             InitializeComponent();
         }
+
+        //Kullanıcıdan alınan şifreyi hashler.
         private string sha256_hash(string sifre)
         {
             using (SHA256 hash = SHA256Managed.Create())
@@ -32,6 +34,7 @@ namespace AYS_UI
             }
         }
 
+        //Koşullara göre hata mesajlarını iletir ve kontrol sağlar.
         private void btn_kayitol_Click(object sender, EventArgs e)
         {
             bool isValid = true;
@@ -67,6 +70,7 @@ namespace AYS_UI
                 form1.ShowDialog();
             }
         }
+        //ismin tekilliğini kontrol eder.
         private bool IsNameExists()
         {
             using (AdminManager adminManager = new AdminManager())
@@ -74,6 +78,7 @@ namespace AYS_UI
                 return adminManager.Search(am => am.Name == txt_ad.Text).Any();
             }
         }
+        //Şifrenin koşullarını kontrol eder.
         private bool PasswordValid(string text)
         {
             if (txt_sifre.Text.ToString().Equals(txt_sifretekrarı.Text.ToString())) 
@@ -104,6 +109,7 @@ namespace AYS_UI
             }
         }
 
+        //Şifre yazılırken kullanıcıya gösterilip gösterilmeme durumunu kontrol eder.
 
         private void btn_gozKırp_Click(object sender, EventArgs e)
         {

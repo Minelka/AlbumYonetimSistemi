@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AYS_DAL.Entities.Abstract
 {
+    //CRUD işlemler interface ile verilir.
     public interface IEntity
     {
             public int Id { get; set; }

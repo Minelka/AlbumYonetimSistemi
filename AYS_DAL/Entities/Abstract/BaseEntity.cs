@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AYS_DAL.Entities.Abstract
 {
+    //Ortak proplar burada verilir.
     public abstract class BaseEntity : IEntity
     {
         public int Id { get; set; }

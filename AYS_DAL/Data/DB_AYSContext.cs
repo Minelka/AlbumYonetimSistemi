@@ -12,10 +12,12 @@ namespace AYS_DAL.Data
 {
     public class DB_AYSContext : DbContext
     {
+        //Database erişim sağlanır.
         public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Album> Albums { get; set; }
 
+        //Hashleme metodu oluşturuldu.
         private string sha256_hash(string sifre)
         {
             using (SHA256 hash = SHA256Managed.Create())
@@ -23,6 +25,8 @@ namespace AYS_DAL.Data
                 return string.Concat(hash.ComputeHash(Encoding.UTF8.GetBytes(sifre)).Select(l => l.ToString("X2")));
             }
         }
+
+        //Seed data oluşturulur.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -118,10 +122,12 @@ namespace AYS_DAL.Data
                  });
 
         }
+        // Serverler için kısa yol yapılır.
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string serverMinel = "DESKTOP-J5485VO";
             string serverEfnan = "DESKTOP-VAQBE6U";
+            string serverMustafa = "DESKTOP-U76CSFK";
 
             string connStr = $"Server={serverMinel};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
 

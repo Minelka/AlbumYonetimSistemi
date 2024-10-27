@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace AYS_BLL.Models
 {
+    //Album için özel olan proplar burada yer alır. Görüntülenme yapılabilmesi için model oluşturulur.
     public class AlbumModel : BaseModel
     {
         public string Name { get; set; }

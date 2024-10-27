@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AYS_DAL.Entities.Concrete
 {
+    //Admin sınıfına ait roplar burada yer alır.
     public class Admin : BaseEntity
     {
         [Column(TypeName = "nvarchar(25)")]

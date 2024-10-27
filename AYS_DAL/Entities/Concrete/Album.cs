@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AYS_DAL.Entities.Concrete
 {
+    //Album sınıfına ait roplar burada yer alır.
     public class Album : BaseEntity
     {
         [Column(TypeName = "nvarchar(50)")]

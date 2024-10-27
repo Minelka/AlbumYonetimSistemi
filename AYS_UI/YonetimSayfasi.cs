@@ -28,6 +28,7 @@ namespace AYS_UI
         {
 
         }
+        //Datagridde seçme işlemi yapıldığında textlere atama işlemini yapar.
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -49,6 +50,7 @@ namespace AYS_UI
             }
         }
 
+        //Getir metotu datagride verileri getirir.
         private void Getir()
         {
 
@@ -63,7 +65,7 @@ namespace AYS_UI
                     dataGridView1.Columns[i].Visible = false;
 
         }
-
+        //Tüm albumleri getirir.
         private void btn_tamami_Click(object sender, EventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -76,6 +78,7 @@ namespace AYS_UI
                     dataGridView1.Columns[i].Visible = false;
         }
 
+        //Satışı durmuş albümleri getirir.
         private void btn_satisdurmus_Click(object sender, EventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -88,6 +91,7 @@ namespace AYS_UI
                     dataGridView1.Columns[i].Visible = false;
         }
 
+        //Satışı devameden albümleri getirir.
         private void btn_devam_Click(object sender, EventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -100,6 +104,7 @@ namespace AYS_UI
                     dataGridView1.Columns[i].Visible = false;
         }
 
+        //Son eklenen 10 albüm getirilir.
         private void btn_son_Click(object sender, EventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -112,6 +117,7 @@ namespace AYS_UI
                     dataGridView1.Columns[i].Visible = false;
         }
 
+        //İndirimli albümleri getirir.
         private void btn_indirim_Click(object sender, EventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -124,6 +130,7 @@ namespace AYS_UI
                     dataGridView1.Columns[i].Visible = false;
         }
 
+        //Albüm ekler.
         private void btn_ekle_Click(object sender, EventArgs e)
         {
             using (AlbumManager albumManager = new AlbumManager())
@@ -153,6 +160,7 @@ namespace AYS_UI
 
         }
 
+        //Var olan albümü günceller.
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
 
@@ -180,6 +188,7 @@ namespace AYS_UI
             chc_status.Checked = false;
         }
 
+        //Var olan albümü siler.
         private void btn_sil_Click(object sender, EventArgs e)
         {
             if (selectedAlbum != null)

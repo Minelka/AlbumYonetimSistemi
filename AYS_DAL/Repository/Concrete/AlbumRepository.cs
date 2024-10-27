@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace AYS_DAL.Repository.Concrete
 {
-
+    // AlbumRepository sınıfı, Album nesneleri için CRUD işlemlerini
+    // gerçekleştiren bir repository'dir. Repository pattern kullanarak
+    // veri erişim katmanını soyutlar.
     public class AlbumRepository : Repository<Album>, IAlbumRepository
     {
         private DbContext _dbcontext;
