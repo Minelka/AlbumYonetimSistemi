@@ -68,7 +68,7 @@
             lbl_sifreuyumsuz.BackColor = Color.SeaShell;
             lbl_sifreuyumsuz.Font = new Font("Segoe Print", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             lbl_sifreuyumsuz.ForeColor = Color.Maroon;
-            lbl_sifreuyumsuz.Location = new Point(34, 243);
+            lbl_sifreuyumsuz.Location = new Point(34, 225);
             lbl_sifreuyumsuz.Name = "lbl_sifreuyumsuz";
             lbl_sifreuyumsuz.Size = new Size(129, 30);
             lbl_sifreuyumsuz.TabIndex = 14;
@@ -128,7 +128,7 @@
             gb_kayit.Font = new Font("Segoe Print", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
             gb_kayit.Location = new Point(182, 12);
             gb_kayit.Name = "gb_kayit";
-            gb_kayit.Size = new Size(439, 377);
+            gb_kayit.Size = new Size(431, 435);
             gb_kayit.TabIndex = 15;
             gb_kayit.TabStop = false;
             gb_kayit.Text = "KAYIT OL";
@@ -157,7 +157,7 @@
             // 
             // btn_kayitol
             // 
-            btn_kayitol.Location = new Point(295, 309);
+            btn_kayitol.Location = new Point(306, 384);
             btn_kayitol.Name = "btn_kayitol";
             btn_kayitol.Size = new Size(119, 45);
             btn_kayitol.TabIndex = 15;
@@ -170,7 +170,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(800, 451);
+            ClientSize = new Size(794, 480);
             Controls.Add(gb_kayit);
             Name = "KayitSayfasics";
             StartPosition = FormStartPosition.CenterScreen;

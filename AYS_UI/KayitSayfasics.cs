@@ -39,16 +39,22 @@ namespace AYS_UI
         {
             bool isValid = true;
 
-            if (string.IsNullOrWhiteSpace(txt_ad.Text) || IsNameExists())  
+            if (string.IsNullOrWhiteSpace(txt_ad.Text) || IsNameExists())
             {
                 lbl_sifreuyumsuz.Visible = true;
                 lbl_sifreuyumsuz.Text = "Bu kullanıcı ismi kullanılmaktadır";
                 isValid = false;
             }
-            if (string.IsNullOrWhiteSpace(txt_sifre.Text)|| string.IsNullOrWhiteSpace(txt_sifretekrarı.Text) || !PasswordValid(txt_sifre.Text))
+            if (string.IsNullOrWhiteSpace(txt_sifretekrarı.Text))
             {
                 lbl_sifreuyumsuz.Visible = true;
                 lbl_sifreuyumsuz.Text = "Şifreler uyumsuzdur";
+                isValid = false;
+            }
+            if (string.IsNullOrWhiteSpace(txt_sifre.Text) || !PasswordValid(txt_sifre.Text))
+            {
+                lbl_sifreuyumsuz.Visible = true;
+                lbl_sifreuyumsuz.Text = "Şifreniz boş, sekiz karakterden az,\niki büyük harf bulunmamakta, \nüç küçük harf içermemekte\nya da özel karakter içermemektedir.";
                 isValid = false;
             }
             if (isValid)
@@ -81,7 +87,7 @@ namespace AYS_UI
         //Şifrenin koşullarını kontrol eder.
         private bool PasswordValid(string text)
         {
-            if (txt_sifre.Text.ToString().Equals(txt_sifretekrarı.Text.ToString())) 
+            if (txt_sifre.Text.ToString().Equals(txt_sifretekrarı.Text.ToString()))
             {
                 if (text.Length < 8) return false;
 
@@ -142,6 +148,11 @@ namespace AYS_UI
                 isVisiblePassword = false;
                 btnShowHidePassword.Image = AYS_UI.Properties.Resources.resim__1_;
             }
+        }
+
+        private void lbl_sifreuyumsuz_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
