@@ -47,6 +47,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Image\eyebrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Image\OIG1.AE..jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
