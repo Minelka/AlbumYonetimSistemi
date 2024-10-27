@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace AYS_DAL.UnitOfWorks
 {
+    // UnitOfWork sınıfı, veri erişim katmanında birimi temsil eder.
+    // Birden fazla repository'yi yönetir ve veri bütünlüğünü sağlar.
     public class UnitOfWork : IUnitOfWork
     {
         private DbContext _dbcontext;
