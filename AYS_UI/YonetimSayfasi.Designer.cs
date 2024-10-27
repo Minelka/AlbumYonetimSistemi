@@ -32,6 +32,8 @@
             dataGridView1 = new DataGridView();
             btn_tamami = new Button();
             gb_albumekleme = new GroupBox();
+            btn_sil = new Button();
+            btn_guncelle = new Button();
             dtpDate = new DateTimePicker();
             btn_ekle = new Button();
             chc_status = new CheckBox();
@@ -61,8 +63,10 @@
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(570, 136);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btn_tamami
@@ -80,6 +84,8 @@
             // gb_albumekleme
             // 
             gb_albumekleme.BackColor = Color.Chocolate;
+            gb_albumekleme.Controls.Add(btn_sil);
+            gb_albumekleme.Controls.Add(btn_guncelle);
             gb_albumekleme.Controls.Add(dtpDate);
             gb_albumekleme.Controls.Add(btn_ekle);
             gb_albumekleme.Controls.Add(chc_status);
@@ -94,7 +100,7 @@
             gb_albumekleme.Controls.Add(txt_name);
             gb_albumekleme.Controls.Add(lbl_name);
             gb_albumekleme.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
-            gb_albumekleme.Location = new Point(140, 9);
+            gb_albumekleme.Location = new Point(147, 11);
             gb_albumekleme.Margin = new Padding(3, 2, 3, 2);
             gb_albumekleme.Name = "gb_albumekleme";
             gb_albumekleme.Padding = new Padding(3, 2, 3, 2);
@@ -102,6 +108,28 @@
             gb_albumekleme.TabIndex = 2;
             gb_albumekleme.TabStop = false;
             gb_albumekleme.Text = "ALBÜM EKLEME EKRANI";
+            // 
+            // btn_sil
+            // 
+            btn_sil.Location = new Point(6, 248);
+            btn_sil.Margin = new Padding(3, 2, 3, 2);
+            btn_sil.Name = "btn_sil";
+            btn_sil.Size = new Size(82, 33);
+            btn_sil.TabIndex = 15;
+            btn_sil.Text = "SİL";
+            btn_sil.UseVisualStyleBackColor = true;
+            btn_sil.Click += btn_sil_Click;
+            // 
+            // btn_guncelle
+            // 
+            btn_guncelle.Location = new Point(113, 236);
+            btn_guncelle.Margin = new Padding(3, 2, 3, 2);
+            btn_guncelle.Name = "btn_guncelle";
+            btn_guncelle.Size = new Size(90, 33);
+            btn_guncelle.TabIndex = 14;
+            btn_guncelle.Text = "GUNCELLE";
+            btn_guncelle.UseVisualStyleBackColor = true;
+            btn_guncelle.Click += btn_guncelle_Click;
             // 
             // dtpDate
             // 
@@ -278,7 +306,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(626, 506);
+            ClientSize = new Size(656, 563);
             Controls.Add(btn_indirim);
             Controls.Add(btn_son);
             Controls.Add(btn_devam);
@@ -318,5 +346,7 @@
         private Button btn_son;
         private Button btn_indirim;
         private DateTimePicker dtpDate;
+        private Button btn_sil;
+        private Button btn_guncelle;
     }
 }

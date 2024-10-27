@@ -17,7 +17,7 @@ namespace AYS_BLL.Models
 
         public decimal Price { get; set; }
 
-        public double Discount { get; set; }
+        public decimal Discount { get; set; }
 
         public bool Status { get; set; }
     }

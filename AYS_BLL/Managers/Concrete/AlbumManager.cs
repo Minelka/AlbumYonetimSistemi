@@ -35,8 +35,13 @@ namespace AYS_BLL.Managers.Concrete
         {
             ICollection<AlbumModel> albums = _albumService.GetAll().Select(a => new AlbumModel
             {
+                Id = a.Id,
                 Name = a.Name,
-                Artist = a.Artist
+                Artist = a.Artist,
+                ReleaseDate = a.ReleaseDate,
+                Price = a.Price,
+                Discount = a.Discount,
+                Status = a.Status
             }).ToList();
 
             return _mapper.Map<ICollection<AlbumModel>>(albums);

@@ -12,9 +12,9 @@ namespace AYS_DAL.Services.Abstract
         public void Create(TModel model);
         public void Update(TModel model);
 
-        public void Delete(TModel model); // Soft delete (gerçekten silmeyip, statüyü silindi yapacak)
+        public void Delete(TModel model); 
 
-        public void Remove(TModel model); // Hard delete (gerçekten silecek)
+        public void Remove(TModel model); 
 
         public ICollection<TModel> GetAll();
         public TModel GetById(int id);

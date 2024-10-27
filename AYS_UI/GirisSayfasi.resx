@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnShowHidePassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAB2AAAAdgAUeEWlIAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAAtElEQVQ4T+3QQQpBURTG8VtmYgVsgokRC5CJARYhGxImkk0wohS2YEzMDIwU/+/c0+tJZGAkX/3q
-        nHu/V++98M/3kkM+jh9FXT2TZIIdCra9TxHqjm3zlHHGBXUdvEgD6qhb0kE6G1xxwwojNN3Qz3SnzhoP
-        aUOXXXfwPW0P3fV8byHJFFtkbAthgCMq7oQ+FHX0tg//QH80G0fLErM4WuZYxNGibrr/lA6qcbTUoM/8
-        vYRwB8QoJf9USlA/AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAcFBQYFBAcGBQYIBwcIChELCgkJChUPEAwRGBUaGRgVGBcb

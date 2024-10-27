@@ -27,12 +27,29 @@ namespace AYS_DAL.Repository.Abstract
 
 
         }
-        //Kullanıcıdan alınan değeri biz sıfır olarak atayacağız. Admin paneli için user ıd önemli
+       
         public void Update(TEntity entity)
         {
+            //entity.Modified = DateTime.Now;
+            //entity.IsActive = true;
+            //entity.Created = GetById(entity.Id).Created;
+
+            //_entities.Update(entity);
+
+            var existingEntity = GetById(entity.Id);
+
+            if (existingEntity != null)
+            {
+               
+                entity.Created = existingEntity.Created;
+            }
+            else
+            {
+                entity.Created = DateTime.Now; 
+            }
+
             entity.Modified = DateTime.Now;
             entity.IsActive = true;
-            entity.Created = GetById(entity.Id).Created;
 
             _entities.Update(entity);
         }
