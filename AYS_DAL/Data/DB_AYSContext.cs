@@ -129,7 +129,7 @@ namespace AYS_DAL.Data
             string serverEfnan = "DESKTOP-VAQBE6U";
             string serverMustafa = "DESKTOP-U76CSFK";
 
-            string connStr = $"Server={serverMinel};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
+            string connStr = $"Server={serverEfnan};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
 
             optionsBuilder.UseSqlServer(connStr);
         }

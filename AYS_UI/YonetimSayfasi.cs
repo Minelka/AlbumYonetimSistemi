@@ -41,7 +41,7 @@ namespace AYS_UI
                     {
                         txt_name.Text = selectedAlbum.Name;
                         txt_artist.Text = selectedAlbum.Artist;
-                        dtpDate.Value = selectedAlbum.ReleaseDate.ToDateTime(TimeOnly.MinValue);
+                        //dtpDate.Value = selectedAlbum.ReleaseDate.ToDateTime(TimeOnly.MinValue);
                         txt_price.Text = selectedAlbum.Price.ToString();
                         txt_discount.Text = selectedAlbum.Discount.ToString();
                         chc_status.Checked = selectedAlbum.Status;

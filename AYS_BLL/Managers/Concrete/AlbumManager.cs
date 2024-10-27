@@ -32,6 +32,7 @@ namespace AYS_BLL.Managers.Concrete
             _mapper = new Mapper(_config);
         }
 
+        //Tüm albümleri listeler
         public ICollection<AlbumModel> GetAllAlbums()
         {
             ICollection<AlbumModel> albums = _albumService.GetAll().Select(a => new AlbumModel
@@ -48,6 +49,7 @@ namespace AYS_BLL.Managers.Concrete
             return _mapper.Map<ICollection<AlbumModel>>(albums);
         }
 
+        //Satılmayan albümleri listeler
         public ICollection<AlbumModel> GetUnsoldAlbums()
         {
             var unsoldAlbums = GetAllAlbums()
@@ -61,6 +63,7 @@ namespace AYS_BLL.Managers.Concrete
             return _mapper.Map<ICollection<AlbumModel>>(unsoldAlbums);
         }
 
+        //Satışta olan albümleri listeler
         public ICollection<AlbumModel> GetSoldingAlbums()
         {
             var unsoldAlbums = GetAllAlbums()
@@ -74,6 +77,7 @@ namespace AYS_BLL.Managers.Concrete
             return _mapper.Map<ICollection<AlbumModel>>(unsoldAlbums);
         }
 
+        //Son eklenen 10 albbümü listeler
         public ICollection<AlbumModel> GetLast10Albums()
         {
             var unsoldAlbums = GetAllAlbums()
@@ -82,21 +86,23 @@ namespace AYS_BLL.Managers.Concrete
                                      Name = a.Name,
                                      Artist = a.Artist
                                  })
-                                 .OrderByDescending(a => a.Created)
-                                 .ToList();
+                           .OrderByDescending(a => a.Created)
+                           .Take(10)
+                           .ToList();
 
             return _mapper.Map<ICollection<AlbumModel>>(unsoldAlbums);
         }
 
+        //İndirimdeki albümleri listeler
         public ICollection<AlbumModel> GetDiscountedAlbums()
         {
             var unsoldAlbums = GetAllAlbums()
-                                   .Where(a => a.Discount != 0) 
+                                   .Where(a => a.Discount != 0)
                                    .Select(a => new AlbumModel
                                    {
                                        Name = a.Name,
                                        Artist = a.Artist,
-                                       Discount = a.Discount 
+                                       Discount = a.Discount
                                    })
                                    .OrderByDescending(a => a.Discount)
                                    .ToList();
