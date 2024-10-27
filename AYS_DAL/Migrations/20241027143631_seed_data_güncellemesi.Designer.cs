@@ -4,6 +4,7 @@ using AYS_DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AYS_DAL.Migrations
 {
     [DbContext(typeof(DB_AYSContext))]
-    partial class DB_AYSContextModelSnapshot : ModelSnapshot
+    [Migration("20241027143631_seed_data_güncellemesi")]
+    partial class seed_data_güncellemesi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,33 +62,25 @@ namespace AYS_DAL.Migrations
                         {
                             Id = 1,
                             Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
+                            IsActive = false,
                             Name = "Göksel",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
+                            Password = "password123"
                         },
                         new
                         {
                             Id = 2,
                             Created = new DateTime(2023, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
+                            IsActive = false,
                             Name = "Minel",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
+                            Password = "password123"
                         },
                         new
                         {
                             Id = 3,
                             Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
+                            IsActive = false,
                             Name = "Efnan",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
-                            Name = "Mustafa",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
+                            Password = "password123"
                         });
                 });
 

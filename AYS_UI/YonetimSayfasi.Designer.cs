@@ -122,7 +122,7 @@
             // 
             // btn_guncelle
             // 
-            btn_guncelle.Location = new Point(113, 236);
+            btn_guncelle.Location = new Point(110, 248);
             btn_guncelle.Margin = new Padding(3, 2, 3, 2);
             btn_guncelle.Name = "btn_guncelle";
             btn_guncelle.Size = new Size(90, 33);
@@ -141,7 +141,7 @@
             // 
             // btn_ekle
             // 
-            btn_ekle.Location = new Point(231, 236);
+            btn_ekle.Location = new Point(238, 243);
             btn_ekle.Margin = new Padding(3, 2, 3, 2);
             btn_ekle.Name = "btn_ekle";
             btn_ekle.Size = new Size(82, 33);

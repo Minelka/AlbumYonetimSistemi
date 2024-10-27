@@ -24,18 +24,10 @@ namespace AYS_DAL.Repository.Abstract
         {
             entity.IsActive = true;
             _entities.Add(entity);
-
-
         }
        
         public void Update(TEntity entity)
         {
-            //entity.Modified = DateTime.Now;
-            //entity.IsActive = true;
-            //entity.Created = GetById(entity.Id).Created;
-
-            //_entities.Update(entity);
-
             var existingEntity = GetById(entity.Id);
 
             if (existingEntity != null)
@@ -92,12 +84,10 @@ namespace AYS_DAL.Repository.Abstract
             }
             this.disposed = true;
         }
-
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
     }
 }

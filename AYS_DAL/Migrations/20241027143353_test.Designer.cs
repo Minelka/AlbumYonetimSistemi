@@ -4,6 +4,7 @@ using AYS_DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AYS_DAL.Migrations
 {
     [DbContext(typeof(DB_AYSContext))]
-    partial class DB_AYSContextModelSnapshot : ModelSnapshot
+    [Migration("20241027143353_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,33 +62,25 @@ namespace AYS_DAL.Migrations
                         {
                             Id = 1,
                             Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
+                            IsActive = false,
                             Name = "Göksel",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
+                            Password = "password123"
                         },
                         new
                         {
                             Id = 2,
                             Created = new DateTime(2023, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
+                            IsActive = false,
                             Name = "Minel",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
+                            Password = "password123"
                         },
                         new
                         {
                             Id = 3,
                             Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
+                            IsActive = false,
                             Name = "Efnan",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            IsActive = true,
-                            Name = "Mustafa",
-                            Password = "EF92B778BAFE771E89245B89ECBC08A44A4E166C06659911881F383D4473E94F"
+                            Password = "password123"
                         });
                 });
 
@@ -144,54 +139,6 @@ namespace AYS_DAL.Migrations
                             Name = "Mesafe",
                             Price = 55m,
                             ReleaseDate = new DateOnly(2006, 1, 5),
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Artist = "Teoman",
-                            Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            Discount = 0.10m,
-                            IsActive = false,
-                            Name = "onyedi",
-                            Price = 975m,
-                            ReleaseDate = new DateOnly(2000, 4, 28),
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Artist = "Eurythmics",
-                            Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            Discount = 0.2m,
-                            IsActive = false,
-                            Name = "Touch",
-                            Price = 450m,
-                            ReleaseDate = new DateOnly(1983, 1, 1),
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Artist = "Kayahan",
-                            Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            Discount = 0m,
-                            IsActive = false,
-                            Name = "Gönül Sayfam",
-                            Price = 975m,
-                            ReleaseDate = new DateOnly(2000, 1, 1),
-                            Status = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Artist = "Yüzyüzeyken Konuşuruz",
-                            Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286),
-                            Discount = 0m,
-                            IsActive = false,
-                            Name = "Akustik Travma",
-                            Price = 975m,
-                            ReleaseDate = new DateOnly(2018, 1, 1),
                             Status = false
                         });
                 });
