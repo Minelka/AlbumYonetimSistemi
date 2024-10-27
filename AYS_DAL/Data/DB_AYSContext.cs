@@ -71,6 +71,7 @@ namespace AYS_DAL.Data
                     ReleaseDate = new DateOnly(2006, 01, 05),
                     Price = 55,
                     Discount = 0,
+                    Status = true,
                     Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286)
                 },
                 new Album
@@ -81,6 +82,7 @@ namespace AYS_DAL.Data
                     ReleaseDate = new DateOnly(2000, 04, 28),
                     Price = 975,
                     Discount = 0.10m,
+                    Status = true,
                     Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286)
                 },
                 new Album
@@ -101,6 +103,7 @@ namespace AYS_DAL.Data
                     ReleaseDate = new DateOnly(2000, 01, 01),
                     Price = 975,
                     Discount = 0,
+                    Status = true,
                     Created = new DateTime(2024, 10, 10, 11, 43, 33, 234, DateTimeKind.Local).AddTicks(5286)
                 },
                  new Album
@@ -120,7 +123,7 @@ namespace AYS_DAL.Data
             string serverMinel = "DESKTOP-J5485VO";
             string serverEfnan = "DESKTOP-VAQBE6U";
 
-            string connStr = $"Server={serverEfnan};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
+            string connStr = $"Server={serverMinel};Database=AYS_DB;Trusted_Connection=true;Trustservercertificate=true";
 
             optionsBuilder.UseSqlServer(connStr);
         }
