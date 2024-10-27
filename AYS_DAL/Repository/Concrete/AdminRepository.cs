@@ -7,33 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AYS_DAL.Repository.Concrete
-{
-    public class AdminRepository : Repository<Admin>, IAdminRepository
+
+    namespace AYS_DAL.Repository.Concrete
     {
-        private DbContext _dbcontext;
-        private bool disposed = false;
-        public AdminRepository(DbContext context) : base(context)
+        // AdminRepository sınıfı, Admin varlıkları ile ilgili veri erişim işlemlerini yönetir.
+        // Repository pattern'ını uygular ve IAdminRepository arayüzünü gerçekleştirir.
+        public class AdminRepository : Repository<Admin>, IAdminRepository
         {
-            _dbcontext = context;
-        }
+            private DbContext _dbcontext; // DbContext örneği, veri tabanı ile etkileşimde kullanılır.
+            private bool disposed = false; // Dispose işlemi kontrolü için bayrak.
 
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!this.disposed)
+            // Constructor: Yeni bir AdminRepository örneği oluşturulduğunda DbContext başlatılır.
+            public AdminRepository(DbContext context) : base(context)
             {
-                if (disposing)
-                {
-                    _dbcontext.Dispose();
-                }
+                _dbcontext = context; // Context atanır.
             }
-            this.disposed = true;
-        }
 
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            // Dispose metodu: Kaynakları serbest bırakmak için kullanılır.
+            protected virtual void Dispose(bool disposing)
+            {
+                if (!this.disposed)
+                {
+                    if (disposing)
+                    {
+                        // Managed kaynakları serbest bırak.
+                        _dbcontext.Dispose(); // DbContext'i dispose et.
+                    }
+                }
+                this.disposed = true; // Dispose işlemi yapıldığını işaretle.
+            }
+
+            // IDisposable arayüzünden gelen Dispose metodu.
+            public void Dispose()
+            {
+                Dispose(true); // Dispose işlemini çağır.
+                GC.SuppressFinalize(this); // Çöp toplayıcıya, nesnenin sonlandırıcısını çağırmaması için bildirimde bulun.
+            }
         }
     }
-}
+
