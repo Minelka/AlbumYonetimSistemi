@@ -111,13 +111,13 @@ namespace AYS_UI
             {
                 txt_sifre.PasswordChar = '\0';
                 isVisiblePassword = true;
-                btn_gozKırp.Image = AYS_UI.Properties.Resources.resim__1_;
+                btn_gozKırp.Image = AYS_UI.Properties.Resources.resim__2_;
             }
             else
             {
                 txt_sifre.PasswordChar = '*';
                 isVisiblePassword = false;
-                btn_gozKırp.Image = AYS_UI.Properties.Resources.resim__2_;
+                btn_gozKırp.Image = AYS_UI.Properties.Resources.resim__1_;
             }
         }
 
@@ -128,13 +128,13 @@ namespace AYS_UI
             {
                 txt_sifretekrarı.PasswordChar = '\0';
                 isVisiblePassword = true;
-                btnShowHidePassword.Image = AYS_UI.Properties.Resources.resim__1_;
+                btnShowHidePassword.Image = AYS_UI.Properties.Resources.resim__2_;
             }
             else
             {
                 txt_sifretekrarı.PasswordChar = '*';
                 isVisiblePassword = false;
-                btnShowHidePassword.Image = AYS_UI.Properties.Resources.resim__2_;
+                btnShowHidePassword.Image = AYS_UI.Properties.Resources.resim__1_;
             }
         }
     }
